@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS l_pairs (
+  user1 VARCHAR(255),
+  user2 VARCHAR(255)
+);
+CREATE TABLE IF NOT EXISTS l_msgs (
+  user1 VARCHAR(255),
+  user2 VARCHAR(255),
+  message TEXT
+);

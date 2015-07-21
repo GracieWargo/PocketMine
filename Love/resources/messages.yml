@@ -1,0 +1,52 @@
+l:
+ usage: "Использование: /l <суб-команда> [дополнительные параметры...]"
+ description: "Плагин на свадьбы by Tarik02"
+ permission: "Вы не имеете права использовать эту команду!"
+ married: "У вас уже есть пара!"
+ no-married: "У вас нет пары!"
+ no-online: "Ваша пара не онлайн!"
+ is-married: "У %s уже есть пара!"
+ no-is-married: "У %s нет пары."
+ is-pair: "Пара %s - %s"
+ query: "%s сделал Вам предложение руки и сердца"
+ query-yes: "/l yes %s - принять"
+ query-no: "/l no - отклонить"
+ query-all: "%s сделал предложение %s"
+ you-query: "Вы сделали предложение %s"
+ query-on: "%s принял предложение"
+ query-off: "%s отказал предложение"
+ marry-msg: "%s и %s теперь муж и жена"
+ queried: "Вы уже сделали предложение %s"
+ no-queries: "Вам не сделали в последнее время ни одного предложения"
+ offline: "Вы можете сделать предложение только игроку, который онлайн"
+ pair-offline: "Ваша пара не в сети!"
+ divorced: "Вы развелись с игроком %s"
+ msg-divorced: "%s кинул вас!"
+ all-divorced: "%s и %s развелись"
+ no-marry-you: "Вы не можете сделать предложение самому себе!"
+ you-pair: "Ваша пара"
+ pair-messages: "Сообщения от вашей пары:"
+ marry:
+  usage: "/l marry <кому>"
+  description: "Предложить руку и сердце"
+ divorce:
+  usage: "/l divorce"
+  description: "Развестись"
+ msg:
+  usage: "/l msg <Сообщение>"
+  description: "Оставить сообщение для своей пары"
+ tp:
+  usage: "/l tp"
+  description: "Телепортироваться к паре"
+ who:
+  usage: "/l who <Ник игрока>"
+  description: "Узнать пару игрока"
+ yes:
+  usage: "/l yes [ник, сделавшего предложение]"
+  description: "Принять предложение"
+ no:
+  usage: "/l no"
+  description: "Отказать предложение"
+ help:
+  usage: "/l help"
+  description: "Команды плагина Love"

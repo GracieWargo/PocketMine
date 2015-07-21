@@ -1,0 +1,26 @@
+name: Love
+main: Tarik02\Love\Love
+version: 1.0.0
+api: 1.12.0
+load: STARTUP
+author: Tarik02
+authors: [Tarik02]
+description: Love.
+website: https://github.com/Tarik02/Love
+commands:
+ l:
+  description: "Love"
+  usage: "/l <sub command> [parameters]"
+  permission: love.command.l
+permissions:
+ love:
+  default: op
+  description: "Allows using everything Love has"
+  children:
+   love.command:
+    description: "Allows using Love commands"
+    default: true
+    children:
+     love.command.l:
+      description: "Allows to do love commands"
+      default: true
