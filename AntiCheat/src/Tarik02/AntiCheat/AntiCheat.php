@@ -14,6 +14,7 @@ use pocketmine\event\Listener;
 
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
+use EntityDamageByChildEntityEvent;
 
 use Tarik02\AntiCheat\task\ExecuteTask;
 
@@ -75,7 +76,7 @@ class AntiCheat extends PluginBase implements Listener
 	public function onEntityDamage(EntityDamageEvent $event)
 	{
 		$Victim = $event->getEntity();
-		if ($event instanceof EntityDamageByEntityEvent)
+		if (($event instanceof EntityDamageByEntityEvent) && (!($event instanceof EntityDamageByChildEntityEvent)))
 		{
 			$Damager = $event->getDamager();
 
