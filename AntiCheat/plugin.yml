@@ -1,0 +1,9 @@
+name: AntiCheat
+main: Tarik02\AntiCheat\AntiCheat
+version: 1.0.0
+api: 1.12.0
+load: STARTUP
+author: Tarik02
+authors: [Tarik02]
+description: AntiCheat
+website: https://github.com/Tarik02/PocketMine
