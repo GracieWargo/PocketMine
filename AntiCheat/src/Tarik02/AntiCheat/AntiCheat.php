@@ -1,20 +1,23 @@
 <?php
 namespace Tarik02\AntiCheat;
 
+use pocketmine\plugin\PluginBase;
+use pocketmine\plugin\MethodEventExecutor;
+
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\utils\Config;
 use pocketmine\Player;
 use pocketmine\Server;
-use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 
+use pocketmine\event\EventPriority;
 use pocketmine\event\Listener;
 
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
-use EntityDamageByChildEntityEvent;
+use pocketmine\event\entity\EntityDamageByChildEntityEvent;
 
 use Tarik02\AntiCheat\task\ExecuteTask;
 
@@ -73,6 +76,9 @@ class AntiCheat extends PluginBase implements Listener
 	}
 
 	/* EVENTS FUNCTIONS */
+	/**
+     * @priority <HIGHEST>
+     */
 	public function onEntityDamage(EntityDamageEvent $event)
 	{
 		$Victim = $event->getEntity();
@@ -113,6 +119,7 @@ class AntiCheat extends PluginBase implements Listener
 		//$this->reloadConfig();
 		
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
+		//$this->getServer()->getPluginManager()->registerEvent("pocketmine\event\entity\EntityDamageEvent",$this,EventPriority::MONITOR,new MethodEventExecutor("onEntityDamage"),$this);
 	}
 	public function onDisable()
 	{
